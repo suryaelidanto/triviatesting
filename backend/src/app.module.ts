@@ -4,12 +4,10 @@ import { AppService } from './app.service';
 import { AuthService } from './auth/auth.service';
 import { GoogleController } from './auth/google/google.controller';
 import { GoogleStrategy } from './auth/google/google.service';
-import { MatchmakingGateway } from './websocket/websocket.service';
-import { MatchmakingModule } from './matchmaking/matchmaking.module';
 
 @Module({
-  imports: [MatchmakingModule],
+  imports: [],
   controllers: [AppController, GoogleController],
-  providers: [AppService, GoogleStrategy, AuthService, MatchmakingGateway],
+  providers: [AppService, GoogleStrategy, AuthService],
 })
 export class AppModule {}

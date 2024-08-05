@@ -6,7 +6,7 @@ export default function HomeScreen() {
   const onGoogleLogin = async () => {
     const redirectUrl = Linking.createURL("/");
     const response = await WebBrowser.openAuthSessionAsync(
-      `https://4f8e-104-28-245-127.ngrok-free.app/google/redirect?redirectTo=${redirectUrl}`,
+      `https://6aeb-104-28-213-127.ngrok-free.app/google/redirect?redirectTo=${redirectUrl}`,
       redirectUrl
     );
     console.log(response.url.split("=")[1].split("&")[0]);
